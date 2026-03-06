@@ -1,1 +1,190 @@
 
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Session Baraka — Corine Mira</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@300;400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{--plum:#0c0016;--gold:#c9a44a;--gold-lt:#e8d090;--lilac:#d4b8ff;--lilac-pale:#f0e4ff;--lilac-dim:#9070bb;--white:#fff8ff}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{background:var(--plum);color:var(--lilac-pale);font-family:'Cormorant Garamond',serif;overflow-x:hidden;line-height:1.8}
+.bg{position:fixed;inset:0;z-index:0;pointer-events:none}
+.orb{position:absolute;border-radius:50%;filter:blur(100px);animation:breathe 9s ease-in-out infinite}
+.o1{width:560px;height:560px;background:radial-gradient(circle,#5b1aff1c,transparent);top:-180px;left:-180px}
+.o2{width:420px;height:420px;background:radial-gradient(circle,#c9a44a14,transparent);top:30%;right:-120px;animation-delay:3s}
+.o3{width:380px;height:380px;background:radial-gradient(circle,#9b3dff18,transparent);bottom:15%;left:-100px;animation-delay:5.5s}
+.o4{width:300px;height:300px;background:radial-gradient(circle,#ffd70010,transparent);bottom:-80px;right:8%;animation-delay:1.5s}
+@keyframes breathe{0%,100%{transform:scale(1);opacity:.7}50%{transform:scale(1.22);opacity:1}}
+.stars{position:fixed;inset:0;z-index:0;pointer-events:none;background-image:radial-gradient(1px 1px at 5% 8%,rgba(255,220,120,.55) 0%,transparent 100%),radial-gradient(1px 1px at 42% 14%,rgba(255,220,120,.6) 0%,transparent 100%),radial-gradient(1px 1px at 88% 18%,rgba(255,220,120,.4) 0%,transparent 100%),radial-gradient(1px 1px at 80% 52%,rgba(255,220,120,.4) 0%,transparent 100%),radial-gradient(1px 1px at 25% 93%,rgba(255,220,120,.35) 0%,transparent 100%)}
+.frame{position:fixed;inset:10px;border:1px solid rgba(201,164,74,.07);pointer-events:none;z-index:0}
+.page{position:relative;z-index:1;max-width:740px;margin:0 auto;padding:0 32px 100px}
+.tag{font-family:'Cinzel',serif;font-size:9.5px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);opacity:.75;margin-bottom:22px;display:block}
+.divider{display:flex;align-items:center;gap:16px;margin:52px 0}
+.dl{flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(201,164,74,.35),transparent)}
+.dg{width:6px;height:6px;background:var(--gold);transform:rotate(45deg);opacity:.7}
+.sec{margin-bottom:58px}
+.hero{text-align:center;padding:88px 0 64px}
+.hero-eye{font-family:'Cinzel',serif;font-size:10px;letter-spacing:5px;text-transform:uppercase;color:var(--gold);opacity:.8;margin-bottom:30px}
+.hero-title{font-family:'Cinzel Decorative',cursive;font-size:clamp(36px,9vw,58px);font-weight:700;color:var(--lilac-pale);letter-spacing:5px;line-height:1.15;margin-bottom:10px;text-shadow:0 0 50px rgba(180,100,255,.45);animation:fadeD 1.1s ease .1s forwards;opacity:0}
+.hero-arabic{font-family:'Cinzel',serif;font-size:13px;letter-spacing:3px;color:var(--gold);opacity:.6;margin-bottom:36px;animation:fadeD 1.1s ease .2s forwards;opacity:0}
+.hero-lead{font-size:clamp(19px,4vw,25px);font-style:italic;font-weight:300;color:var(--lilac);line-height:1.8;max-width:520px;margin:0 auto;animation:fadeD 1.1s ease .35s forwards;opacity:0}
+.promise-intro p{font-size:clamp(20px,4vw,27px);font-style:italic;font-weight:300;color:var(--white);line-height:1.8;margin-bottom:4px}
+.for-who{display:flex;flex-direction:column;gap:13px;margin-top:28px}
+.for-item{display:flex;align-items:flex-start;gap:18px;padding:20px 24px;border:1px solid rgba(201,164,74,.14);border-left:2px solid rgba(201,164,74,.5);background:rgba(180,100,255,.04);transition:all .4s}
+.for-item:hover{background:rgba(180,100,255,.09);border-left-color:var(--gold)}
+.fi{font-size:22px;min-width:28px;margin-top:2px}
+.ft{font-size:17.5px;font-style:italic;color:var(--lilac-pale);line-height:1.65}
+.how-grid{display:flex;flex-direction:column;margin-top:28px;position:relative}
+.how-grid::before{content:'';position:absolute;left:26px;top:50px;bottom:50px;width:1px;background:linear-gradient(180deg,transparent,rgba(201,164,74,.35),transparent)}
+.how-step{display:flex;gap:24px;align-items:flex-start;padding:26px 24px 26px 0;border-bottom:1px solid rgba(201,164,74,.08)}
+.how-step:last-child{border-bottom:none}
+.hic{width:52px;height:52px;min-width:52px;border:1px solid rgba(201,164,74,.35);border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(90,26,255,.12);font-size:22px;position:relative;z-index:1;flex-shrink:0}
+.hco{flex:1;padding-top:6px}
+.htitle{font-family:'Cinzel',serif;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.htext{font-size:16.5px;font-style:italic;color:var(--lilac-pale);line-height:1.8;opacity:.9}
+.sci-intro{font-size:17px;font-style:italic;color:var(--lilac);line-height:1.85;margin-bottom:32px;padding-left:18px;border-left:2px solid rgba(201,164,74,.3)}
+.sci-cards{display:flex;flex-direction:column;gap:16px}
+.sci-card{padding:26px 28px;border:1px solid rgba(201,164,74,.13);background:linear-gradient(135deg,rgba(90,26,255,.07),rgba(201,164,74,.03));transition:all .4s}
+.sci-card:hover{background:linear-gradient(135deg,rgba(90,26,255,.11),rgba(201,164,74,.06))}
+.sci-head{display:flex;align-items:center;gap:14px;margin-bottom:14px}
+.sci-ico{font-size:28px}
+.sci-ttl{font-family:'Cinzel',serif;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);opacity:.9;line-height:1.4}
+.sci-txt{font-size:16px;font-style:italic;color:var(--lilac-pale);line-height:1.82;opacity:.9}
+.sci-ref{margin-top:12px;font-size:13px;color:var(--lilac-dim);opacity:.65;padding-top:10px;border-top:1px solid rgba(201,164,74,.1)}
+.stat-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.stat{display:inline-flex;align-items:center;gap:7px;padding:6px 14px;border:1px solid rgba(201,164,74,.2);background:rgba(201,164,74,.05);font-family:'Cinzel',serif;font-size:9px;letter-spacing:1.5px;color:var(--gold);opacity:.85}
+.promise-box{text-align:center;padding:52px 36px;border:1px solid rgba(201,164,74,.22);background:linear-gradient(160deg,rgba(90,26,255,.07),rgba(201,164,74,.04));position:relative}
+.corner{position:absolute;color:var(--gold);opacity:.35;font-size:10px}
+.tl{top:14px;left:18px}.tr{top:14px;right:18px}.bl{bottom:14px;left:18px}.br{bottom:14px;right:18px}
+.pb-text{font-size:clamp(21px,4vw,27px);font-style:italic;font-weight:300;color:var(--white);line-height:1.72;margin-bottom:24px}
+.pb-strong{font-family:'Cinzel',serif;font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);opacity:.85}
+.pricing{text-align:center;padding:60px 36px;border:1px solid rgba(201,164,74,.25);background:linear-gradient(160deg,rgba(90,20,255,.09),rgba(201,164,74,.05));position:relative;overflow:hidden}
+.pricing::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:160px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.pe{font-family:'Cinzel',serif;font-size:9.5px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);opacity:.7;margin-bottom:28px}
+.pctx{font-size:16px;font-style:italic;color:var(--lilac);opacity:.75;margin-bottom:6px}
+.pold{font-size:18px;color:rgba(212,184,255,.35);text-decoration:line-through;margin-bottom:10px}
+.pnew{font-family:'Cinzel Decorative',cursive;font-size:clamp(52px,13vw,72px);font-weight:700;background:linear-gradient(135deg,var(--gold),var(--gold-lt),#fff8e0,var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;margin-bottom:6px}
+.psuf{font-family:'Cinzel',serif;font-size:16px;color:var(--gold);letter-spacing:3px;opacity:.8;margin-bottom:28px}
+.pnote{font-size:16px;font-style:italic;color:var(--lilac);opacity:.82;line-height:1.75;margin-bottom:22px}
+.badges{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:8px}
+.badge{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;border:1px solid rgba(201,164,74,.28);font-family:'Cinzel',serif;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);background:rgba(201,164,74,.04)}
+.cta-sec{text-align:center;margin-top:52px}
+.cta-main{display:block;padding:20px 54px;background:linear-gradient(135deg,#5b1aff,#7a2fff,#9b4dff);color:var(--white);font-family:'Cinzel',serif;font-size:11px;letter-spacing:3px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(201,164,74,.3);max-width:380px;margin:0 auto 16px;box-shadow:0 0 40px rgba(91,26,255,.35)}
+.wa-btn{display:flex;align-items:center;justify-content:center;gap:12px;padding:18px 40px;background:linear-gradient(135deg,#128C7E,#25D366);color:#fff;font-family:'Cinzel',serif;font-size:11px;letter-spacing:3px;text-transform:uppercase;text-decoration:none;max-width:380px;margin:16px auto 0;box-shadow:0 0 30px rgba(37,211,102,.25)}
+.wa-icon{width:22px;height:22px;flex-shrink:0}
+.cta-sub{margin-top:14px;font-size:13.5px;font-style:italic;color:var(--lilac-dim);opacity:.65}
+.testi-grid{display:flex;flex-direction:column;gap:20px;margin-top:28px}
+.testi-card{padding:28px 28px 24px;border:1px solid rgba(201,164,74,.15);background:linear-gradient(135deg,rgba(90,26,255,.06),rgba(201,164,74,.03));position:relative}
+.testi-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,rgba(201,164,74,.4),transparent)}
+.testi-stars{color:#c9a44a;font-size:13px;letter-spacing:3px;margin-bottom:14px}
+.testi-quote{font-size:17px;font-style:italic;color:var(--lilac-pale);line-height:1.82;margin-bottom:16px;padding-left:18px;position:relative}
+.testi-quote::before{content:'"';position:absolute;left:0;top:-6px;font-size:36px;color:var(--gold);opacity:.3;line-height:1}
+.testi-name{font-family:'Cinzel',serif;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);opacity:.8}
+.testi-tag{display:inline-block;margin-top:8px;padding:4px 12px;border:1px solid rgba(201,164,74,.2);font-family:'Cinzel',serif;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--lilac-dim);opacity:.7}
+.guarantee{display:flex;gap:20px;align-items:flex-start;padding:32px 28px;margin-top:40px;border:1px solid rgba(201,164,74,.12);background:rgba(201,164,74,.03)}
+.gi{font-size:32px;min-width:36px}
+.gt{font-family:'Cinzel',serif;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);opacity:.8;margin-bottom:8px}
+.gd{font-size:16px;font-style:italic;color:var(--lilac-pale);opacity:.8;line-height:1.72}
+.foot{text-align:center;margin-top:64px}
+.devise{font-family:'Cinzel',serif;font-size:9.5px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);opacity:.5;margin-bottom:16px}
+.sig{font-family:'Cinzel Decorative',cursive;font-size:15px;letter-spacing:3px;background:linear-gradient(90deg,var(--gold),var(--gold-lt),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+@keyframes fadeD{from{opacity:0;transform:translateY(-22px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeU{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}
+.a0{animation:fadeD 1.1s ease 0s forwards;opacity:0}.a1{animation:fadeU 1s ease .15s forwards;opacity:0}.a2{animation:fadeU 1s ease .3s forwards;opacity:0}.a3{animation:fadeU 1s ease .45s forwards;opacity:0}.a4{animation:fadeU 1s ease .6s forwards;opacity:0}.a5{animation:fadeU 1s ease .75s forwards;opacity:0}.a6{animation:fadeU 1s ease .9s forwards;opacity:0}
+</style>
+</head>
+<body>
+<div class="bg"><div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div><div class="orb o4"></div></div>
+<div class="stars"></div><div class="frame"></div>
+<div class="page">
+<section class="hero">
+<p class="hero-eye">✦ &nbsp; Corine Mira &nbsp; ✦</p>
+<h1 class="hero-title a0">Session<br>Baraka</h1>
+<p class="hero-arabic a1" style="opacity:0">بَرَكَة &nbsp;·&nbsp; La Grâce divine</p>
+<p class="hero-lead a2" style="opacity:0">Expérimenter la grâce.<br>Retrouver la chance.<br>Ressentir l'amour inconditionnel.<br>Se reconnecter au Soi.</p>
+</section>
+<div class="divider a2" style="opacity:0"><div class="dl"></div><div class="dg"></div><div class="dl"></div></div>
+<section class="sec a3" style="opacity:0">
+<span class="tag">✦ &nbsp; Qu'est-ce que la Baraka</span>
+<div class="promise-intro">
+<p>La Baraka n'est pas la chance au sens du hasard.</p>
+<p style="margin-top:12px;font-size:clamp(16px,3vw,19px);color:var(--lilac);font-style:italic">C'est la grâce qui circule lorsque vous êtes alignée avec ce que vous êtes vraiment. Cette force invisible qui fait que les portes s'ouvrent, que les bonnes personnes arrivent, que les opportunités se présentent sans que vous ayez à forcer, à courir, à vous épuiser.</p>
+<p style="margin-top:16px;font-size:clamp(17px,3.5vw,21px);font-style:italic;color:var(--white)">C'est l'état dans lequel la vie coule.<br>Et cet état ne vient pas de l'extérieur.<br>Il vient de vous.</p>
+</div>
+<div style="margin-top:32px">
+<span class="tag" style="margin-bottom:16px">✦ &nbsp; Ce que la Baraka engendre au quotidien</span>
+<div class="for-who">
+<div class="for-item"><span class="fi">🌅</span><p class="ft">Vous vous réveillez avec une légèreté que vous n'aviez pas la veille.</p></div>
+<div class="for-item"><span class="fi">🧭</span><p class="ft">Les décisions deviennent claires, sans hésitation, sans doute.</p></div>
+<div class="for-item"><span class="fi">🌊</span><p class="ft">Les relations se fluidifient : les tensions se dissolvent, les liens profonds s'approfondissent.</p></div>
+<div class="for-item"><span class="fi">💫</span><p class="ft">Votre corps retrouve son rythme naturel : sommeil, énergie, vitalité.</p></div>
+<div class="for-item"><span class="fi">🚀</span><p class="ft">Vos projets avancent, comme portés.</p></div>
+<div class="for-item"><span class="fi">🕊️</span><p class="ft">Vous cessez de lutter contre votre propre vie.</p></div>
+<div class="for-item"><span class="fi">💎</span><p class="ft">Vous ressentez, parfois pour la première fois, que vous méritez ce que vous désirez.</p></div>
+</div></div></section>
+<div class="divider a3" style="opacity:0"><div class="dl"></div><div class="dg"></div><div class="dl"></div></div>
+<section class="sec a3" style="opacity:0">
+<span class="tag">✦ &nbsp; Cette session est pour vous</span>
+<div class="for-who">
+<div class="for-item"><span class="fi">🌙</span><p class="ft">Pour celles qui ont des idéaux et savent, au fond, qu'elles sont capables de les vivre pleinement.</p></div>
+<div class="for-item"><span class="fi">⚡</span><p class="ft">Pour celles qui ont compris et ont besoin d'avancer maintenant, sans détour.</p></div>
+<div class="for-item"><span class="fi">✨</span><p class="ft">Pour celles qui savent, intimement, que la grâce opère instantanément dès qu'on lui ouvre la porte.</p></div>
+</div></section>
+<div class="divider a4" style="opacity:0"><div class="dl"></div><div class="dg"></div><div class="dl"></div></div>
+<section class="sec a4" style="opacity:0">
+<span class="tag">✦ &nbsp; Comment ça se passe</span>
+<div class="how-grid">
+<div class="how-step"><div class="hic">🔭</div><div class="hco"><p class="htitle">Le Scan de Vie™</p><p class="htext">Je procède à une lecture vibratoire complète de votre champ énergétique avant même que nous nous parlions. Comme une cartographe de l'invisible, je repère exactement où agir.</p></div></div>
+<div class="how-step"><div class="hic">🌍</div><div class="hco"><p class="htitle">La session à distance</p><p class="htext">Depuis votre espace, dans votre confort. Le champ quantique ne connaît pas les frontières géographiques. Présence totale, par échange vocal ou en transmission silencieuse.</p></div></div>
+<div class="how-step"><div class="hic">💨</div><div class="hco"><p class="htitle">Le souffle, le mouvement, le sacré</p><p class="htext">Techniques issues du Kundalini Yoga, de la respiration consciente et du travail somatique. Le corps devient le vecteur de la transformation.</p></div></div>
+<div class="how-step"><div class="hic">🔓</div><div class="hco"><p class="htitle">La dissolution des obstacles</p><p class="htext">Les situations coincées sont travaillées à leur racine vibratoire, dans le corps, dans la mémoire cellulaire, dans les croyances fondatrices.</p></div></div>
+<div class="how-step"><div class="hic">🌟</div><div class="hco"><p class="htitle">L'intégration et la Baraka</p><p class="htext">Ancrage dans la grâce. Recommandations personnalisées pour prolonger la transformation. Quelque chose a bougé. Immédiatement.</p></div></div>
+</div></section>
+<div class="divider a4" style="opacity:0"><div class="dl"></div><div class="dg"></div><div class="dl"></div></div>
+<section class="sec a5" style="opacity:0">
+<span class="tag">✦ &nbsp; Ce que la science comprend aujourd'hui</span>
+<p class="sci-intro">Ce travail n'est pas de la magie, même si ses effets peuvent en avoir l'apparence. Il repose sur des principes documentés par la physique quantique, la neurobiologie et les neurosciences de pointe.</p>
+<div class="sci-cards">
+<div class="sci-card"><div class="sci-head"><span class="sci-ico">⚛️</span><p class="sci-ttl">Physique quantique et champ de conscience</p></div><p class="sci-txt">Le principe de non-localité quantique démontre que deux particules corrélées restent instantanément connectées quelle que soit la distance. Ce principe explique l'efficacité du travail à distance : votre champ vibratoire est accessible depuis n'importe où sur la planète.</p><div class="stat-row"><span class="stat">⚡ Non-localité prouvée 1982</span><span class="stat">🔬 Prix Nobel Physique 2022</span></div><p class="sci-ref">Alain Aspect · Prix Nobel de Physique 2022 : Aspect, Clauser & Zeilinger</p></div>
+<div class="sci-card"><div class="sci-head"><span class="sci-ico">🧠</span><p class="sci-ttl">Neuroplasticité et reprogrammation neuronale</p></div><p class="sci-txt">Le cerveau se recâble en permanence. Un blocage n'est pas une fatalité : c'est un réseau neuronal. La session crée les conditions neurobiologiques d'une reprogrammation profonde et durable.</p><div class="stat-row"><span class="stat">📊 Modifications IRM visibles</span><span class="stat">⏱ Effets dès la 1ère séance</span></div><p class="sci-ref">Dr Joe Dispenza · Candace Pert, Molecules of Emotion</p></div>
+<div class="sci-card"><div class="sci-head"><span class="sci-ico">💓</span><p class="sci-ttl">Cohérence cardiaque et intelligence du cœur</p></div><p class="sci-txt">Le cœur génère un champ électromagnétique 60 fois plus puissant que le cerveau. En cohérence cardiaque, le cortisol diminue, l'ocytocine augmente et l'intuition s'ouvre.</p><div class="stat-row"><span class="stat">💡 Champ EM x60 le cerveau</span><span class="stat">📉 Cortisol -50% en 3min</span></div><p class="sci-ref">Institut HeartMath · Rollin McCraty</p></div>
+<div class="sci-card"><div class="sci-head"><span class="sci-ico">🧬</span><p class="sci-ttl">Épigénétique et mémoire cellulaire</p></div><p class="sci-txt">Nos gènes ne sont pas notre destin. Les traumatismes se logent dans le corps à un niveau cellulaire. Le travail vibratoire adresse ces couches là où la parole seule ne peut atteindre.</p><div class="stat-row"><span class="stat">🧬 Gènes activables/désactivables</span><span class="stat">🌿 Trauma logé dans le corps</span></div><p class="sci-ref">Dr Bruce Lipton · Bessel van der Kolk, Le Corps n'oublie rien</p></div>
+<div class="sci-card"><div class="sci-head"><span class="sci-ico">🌬️</span><p class="sci-ttl">Pranayama et système nerveux autonome</p></div><p class="sci-txt">En 3 minutes de pranayama intense, les neurosciences mesurent une réduction de l'activité de l'amygdale de 40% et une activation des ondes alpha/thêta associées aux états régénérateurs.</p><div class="stat-row"><span class="stat">📉 Amygdale -40% en 3 min</span><span class="stat">🌊 Ondes Alpha/Thêta activées</span></div><p class="sci-ref">Stanford Neurosciences · Andrew Huberman</p></div>
+<div class="sci-card"><div class="sci-head"><span class="sci-ico">🌀</span><p class="sci-ttl">Résonance vibratoire et champ morphique</p></div><p class="sci-txt">Comme un diapason fait vibrer un diapason identique à distance, la transmission vibratoire repose sur la résonance : une fréquence juste entraîne le champ du receveur vers un état de cohérence.</p><div class="stat-row"><span class="stat">🎵 Principe de résonance</span><span class="stat">📡 Transmission à distance</span></div><p class="sci-ref">Rupert Sheldrake, A New Science of Life</p></div>
+</div></section>
+<div class="divider a5" style="opacity:0"><div class="dl"></div><div class="dg"></div><div class="dl"></div></div>
+<div class="promise-box a5" style="opacity:0;margin-bottom:56px"><span class="corner tl">✦</span><span class="corner tr">✦</span><span class="corner bl">✦</span><span class="corner br">✦</span><p class="pb-text">Ce que vous venez chercher,<br>vous le trouverez.<br><br>La promesse est totale.<br>La satisfaction garantie.</p><p class="pb-strong">Le souffle &nbsp;·&nbsp; Le mouvement &nbsp;·&nbsp; Le sacré</p></div>
+<section class="pricing a6" style="opacity:0;margin-bottom:0">
+<p class="pe">✦ &nbsp; Investissement &nbsp; ✦</p>
+<p class="pctx">En l'honneur de ce vendredi sacré</p>
+<p class="pold">Valeur habituelle : 777 €</p>
+<p class="pnew">477</p><p class="psuf">euros</p>
+<p class="pnote">Une seule session.<br>Une transformation ancrée dans la durée.</p>
+<div class="badges"><div class="badge">💳 &nbsp; Paiement en deux fois</div><div class="badge">🕊️ &nbsp; Avant &amp; après session</div><div class="badge">🌍 &nbsp; 100% à distance</div></div>
+</section>
+<section class="cta-sec a6" style="opacity:0">
+<a href="#" class="cta-main">✦ &nbsp; Je réserve ma Session Baraka</a>
+<a href="https://wa.me/212633159978?text=Bonjour%20je%20souhaite%20conna%C3%AEtre%20les%20disponibilit%C3%A9s%20des%20prochains%20rdv%20(session%20Baraka)%20%3F" target="_blank" class="wa-btn"><svg class="wa-icon" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Réserver via WhatsApp</a>
+<p class="cta-sub">Réponse rapide · Disponibilités sur demande</p>
+</section>
+<div class="divider a6" style="opacity:0;margin-top:56px"><div class="dl"></div><div class="dg"></div><div class="dl"></div></div>
+<section class="sec a6" style="opacity:0">
+<span class="tag">✦ &nbsp; Ce qu'elles en disent</span>
+<div class="testi-grid">
+<div class="testi-card"><div class="testi-stars">★ ★ ★ ★ ★</div><p class="testi-quote">Une justesse dans les mots, une douceur qui ne cède rien sur la puissance. Elle a su voir ce que je ne voyais pas moi-même. Après la session, les choses se sont mises en ordre d'elles-mêmes. Et aujourd'hui je vis quelque chose que j'espérais sans y croire : j'ai rencontré mon compagnon, exactement comme Corine l'avait annoncé.</p><p class="testi-name">Peryne</p><span class="testi-tag">Transformation relationnelle</span></div>
+<div class="testi-card"><div class="testi-stars">★ ★ ★ ★ ★</div><p class="testi-quote">Une praticienne complète, qui travaille sur tous les niveaux simultanément. Précise, vaste, profondément bienveillante et d'une exigence rare. En une seule session, des choses ont bougé que des mois de thérapie classique n'avaient pas touchées. La meilleure thérapeute que j'aie rencontrée. Tout simplement.</p><p class="testi-name">Flora</p><span class="testi-tag">Efficacité et complétude</span></div>
+<div class="testi-card"><div class="testi-stars">★ ★ ★ ★ ★</div><p class="testi-quote">Corine a mis le doigt sur des choses que je n'avais jamais dites à personne et que je n'avais pas conscientisées moi-même. Déconcertant de précision. Après, c'est comme si un brouillard s'était levé. Des situations coincées se sont débloquées en quelques jours. Une magicienne qui travaille avec des outils très réels.</p><p class="testi-name">Serena</p><span class="testi-tag">Clarté et déblocage instantané</span></div>
+</div></section>
+<div class="guarantee a6" style="opacity:0"><span class="gi">🛡️</span><div><p class="gt">Satisfaction garantie</p><p class="gd">Après plus de 25 ans d'accompagnement, je sais ce que ce travail transforme. Si vous vous engagez pleinement, vous repartez changée.</p></div></div>
+<div class="foot a6" style="opacity:0"><p class="devise">Le souffle &nbsp;·&nbsp; Le mouvement &nbsp;·&nbsp; Le sacré</p><p class="sig">Corine Mira</p></div>
+</div>
+</body>
+</html>
+Sur CodePen :
+Tout sélectionner (appui long > Tout sélectionner)
+Coller dans la zone HTML
+Cliquer Save
+Cliquer Change View > Full Page
+Copier l'URL et tu me l'envoies 🌙
